@@ -7,7 +7,8 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://inspectra-s4hg.vercel.app/',
+        // target: 'https://inspectra-s4hg.vercel.app/',/
+        target: 'https://localhost:5000',
         changeOrigin: true,
       }
     }
