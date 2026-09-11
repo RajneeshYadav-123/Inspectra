@@ -207,24 +207,38 @@ const generateInspectionPDF = async (booking, answers) => {
     </html>
     `;
     const fs = require('fs');
-    let executablePath;
-    const paths = [
-        'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-        'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-        'C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe',
-        'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe'
-    ];
-    for (const p of paths) {
-        if (fs.existsSync(p)) {
-            executablePath = p;
-            break;
+    let browser;
+    
+    if (process.env.VERCEL) {
+        const chromium = require('@sparticuz/chromium');
+        const puppeteerCore = require('puppeteer-core');
+        
+        browser = await puppeteerCore.launch({
+            args: chromium.args,
+            defaultViewport: chromium.defaultViewport,
+            executablePath: await chromium.executablePath(),
+            headless: chromium.headless,
+        });
+    } else {
+        let executablePath;
+        const paths = [
+            'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+            'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
+            'C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe',
+            'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe'
+        ];
+        for (const p of paths) {
+            if (fs.existsSync(p)) {
+                executablePath = p;
+                break;
+            }
         }
+        browser = await puppeteer.launch({
+            args: ['--no-sandbox', '--disable-setuid-sandbox'],
+            headless: true,
+            executablePath: executablePath 
+        });
     }
-    const browser = await puppeteer.launch({
-        args: ['--no-sandbox', '--disable-setuid-sandbox'],
-        headless: true,
-        executablePath: executablePath 
-    });
     try {
         const page = await browser.newPage();
         await page.setContent(htmlContent, { waitUntil: 'domcontentloaded', timeout: 0 });
