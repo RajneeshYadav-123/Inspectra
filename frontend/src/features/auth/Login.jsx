@@ -41,17 +41,13 @@ const Login = () => {
       setLoading(false);
     }
   };
-  const creds = [
-    { role: 'Admin', email: 'admin@test.com', pass: 'admin123' },
-    { role: 'Customer', email: 'customer@test.com', pass: 'customer123' },
-    { role: 'Inspector', email: 'inspector@test.com', pass: 'inspector123' },
-  ];
+
   return (
     <div className="auth-page">
       <div className="auth-card">
-        <div className="auth-brand">
-          <div className="auth-brand__icon"><img src="/logo.png" alt="logo" style={{width: '100%', height: '100%', objectFit: 'contain'}} /></div>
-          <span className="auth-brand__name">Inspectra</span>
+        <div className="auth-brand" style={{ cursor: 'pointer' }} onClick={() => navigate('/')}>
+          <div className="auth-brand__icon"><img src="/logo.png" alt="logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+          <span className="auth-brand__name" style={{ cursor: 'pointer' }}>Inspectra</span>
         </div>
         <h1 className="auth-title">Sign in</h1>
         <p className="auth-sub">Access your inspection portal</p>
@@ -74,26 +70,7 @@ const Login = () => {
         <div className="auth-link-row">
           No account? <Link to="/signup">Create one</Link>
         </div>
-        <div style={{ marginTop: 22, paddingTop: 18, borderTop: '1px solid var(--border)' }}>
-          <p className="footnote" style={{ marginBottom: 10 }}>Quick Access</p>
-          {creds.map(c => (
-            <button key={c.role} type="button"
-              onClick={() => setForm({ email: c.email, password: c.pass })}
-              style={{
-                display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-                width: '100%', padding: '8px 12px', marginBottom: 6,
-                border: '1px solid var(--border)', borderRadius: 'var(--r-md)',
-                background: 'var(--bg)', cursor: 'pointer', fontSize: 12,
-                fontFamily: 'inherit', color: 'var(--text-2)', transition: 'background .12s'
-              }}
-              onMouseOver={e => e.currentTarget.style.background = '#E8E7E2'}
-              onMouseOut={e => e.currentTarget.style.background = 'var(--bg)'}
-            >
-              <span style={{ fontWeight: 700, color: 'var(--text)' }}>{c.role}</span>
-              <span>{c.email}</span>
-            </button>
-          ))}
-        </div>
+
       </div>
     </div>
   );

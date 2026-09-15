@@ -35,9 +35,9 @@ const Signup = () => {
   return (
     <div className="auth-page">
       <div className="auth-card">
-        <div className="auth-brand">
-          <div className="auth-brand__icon"><img src="/logo.png" alt="logo" style={{width: '100%', height: '100%', objectFit: 'contain'}} /></div>
-          <span className="auth-brand__name">Inspectra</span>
+        <div className="auth-brand" style={{ cursor: 'pointer' }} onClick={() => navigate('/')}>
+          <div className="auth-brand__icon"><img src="/logo.png" alt="logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+          <span className="auth-brand__name" style={{ cursor: 'pointer' }}>Inspectra</span>
         </div>
         <h1 className="auth-title">Create account</h1>
         <p className="auth-sub">Get started with vehicle inspections</p>
@@ -77,9 +77,7 @@ const Signup = () => {
         <div className="auth-link-row">
           Have an account? <Link to="/login">Sign in</Link>
         </div>
-        <p className="footnote" style={{ marginTop: 20 }}>
-          Verified Inspection Protocol · Secure Session
-        </p>
+
       </div>
     </div>
   );

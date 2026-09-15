@@ -9,11 +9,11 @@ const Home = () => {
   };
   return (
     <div className="home-page">
-      {}
+      { }
       <nav className="h-navbar">
         <div className="h-nav-logo" style={{ cursor: 'pointer' }} onClick={() => window.scrollTo(0, 0)}>
-          <div className="h-nav-icon"><img src="/logo.png" alt="logo" style={{width: '100%', height: '100%', objectFit: 'contain', borderRadius: '50%'}} /></div>
-          <span className="h-nav-text">Inspectra</span>
+          <div className="h-nav-icon"><img src="/logo.png" alt="logo" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '50%' }} /></div>
+          <span className="h-nav-text" style={{ cursor: 'pointer' }} >Inspectra</span>
         </div>
         <div className="h-nav-links">
           <a href="#home">HOME</a>
@@ -30,14 +30,14 @@ const Home = () => {
           </button>
         </div>
       </nav>
-      {}
+      { }
       <section className="h-hero" id="home">
         <div className="h-hero-content">
           <div className="h-hero-badge">■ CERTIFIED VEHICLE INSPECTIONS</div>
           <h1 className="h-hero-title">KNOW THE CONDITION<br />OF YOUR VEHICLE.</h1>
           <p className="h-hero-subtitle">
-            Professional multi-point vehicle inspections providing detailed diagnostic 
-            reports, comprehensive photo evidence, and certified peace of mind before 
+            Professional multi-point vehicle inspections providing detailed diagnostic
+            reports, comprehensive photo evidence, and certified peace of mind before
             you buy, sell, or drive.
           </p>
           <div className="h-hero-actions">
@@ -58,11 +58,11 @@ const Home = () => {
         </div>
         <div className="h-hero-image-container">
           <div className="h-hero-image-backdrop"></div>
-          {}
-          <div className="h-hero-image" style={{backgroundImage: 'url(/hero_car.jpg)'}}></div>
+          {/* Background car image */}
+          <div className="h-hero-image" style={{ backgroundImage: 'url(/mercedes.png)' }}></div>
         </div>
       </section>
-      {}
+      { }
       <div className="h-ticker">
         <div className="h-ticker-track">
           <span>■ 120-POINT CHECK</span>
@@ -75,7 +75,7 @@ const Home = () => {
           <span>■ NATIONWIDE SERVICE</span>
         </div>
       </div>
-      {}
+      { }
       <section className="h-section" id="about">
         <div className="h-section-header">
           <span className="h-section-badge">OUR PROCESS</span>
@@ -115,7 +115,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {}
+      { }
       <section className="h-section h-section-gray" id="process">
         <div className="h-section-header">
           <span className="h-section-badge">HOW IT WORKS</span>
@@ -140,7 +140,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {}
+      { }
       <section className="h-section h-bg-alt">
         <div className="h-section-header">
           <span className="h-section-badge">WHAT WE CHECK</span>
@@ -151,7 +151,7 @@ const Home = () => {
           <img src="/car-features.png" alt="Car Inspection Features" className="h-features-image" />
         </div>
       </section>
-      {}
+      { }
       <section className="h-section" id="preview-section">
         <div className="h-section-header">
           <span className="h-section-badge">THE DELIVERABLE</span>
@@ -162,7 +162,7 @@ const Home = () => {
           <div className="h-preview-mockup">
             <div className="h-preview-header">
               <div>
-                <span className="h-preview-logo"><img src="/logo.png" alt="logo" style={{width: '24px', height: '24px', objectFit: 'contain', borderRadius: '50%', verticalAlign: 'middle'}} /></span>
+                <span className="h-preview-logo"><img src="/logo.png" alt="logo" style={{ width: '24px', height: '24px', objectFit: 'contain', borderRadius: '50%', verticalAlign: 'middle' }} /></span>
                 <span className="h-preview-title">VEHICLE INSPECTION REPORT</span>
               </div>
               <div className="h-preview-badge">VERIFIED</div>
@@ -208,14 +208,14 @@ const Home = () => {
               </div>
             </div>
             <div className="h-preview-footer">
-              <button className="h-btn-outline" style={{width: '100%', borderColor: 'rgba(255,255,255,0.2)'}}>
+              <button className="h-btn-outline" style={{ width: '100%', borderColor: 'rgba(255,255,255,0.2)' }}>
                 DOWNLOAD FULL PDF REPORT ↓
               </button>
             </div>
           </div>
         </div>
       </section>
-      {}
+      { }
       <section className="h-section h-section-gray" id="services">
         <div className="h-section-header">
           <span className="h-section-badge">TRANSPARENT PRICING</span>
@@ -227,14 +227,14 @@ const Home = () => {
             <div className="h-pricing-tier">STANDARD</div>
             <h3 className="h-pricing-title">STANDARD VEHICLE INSPECTION</h3>
             <p className="h-pricing-desc">Essential safety and mechanical check for peace of mind.</p>
-            <div className="h-pricing-price">$99.99 <span>/ vehicle</span></div>
+            <div className="h-pricing-price">₹999 <span>/ vehicle</span></div>
             <ul className="h-pricing-features">
               <li>80-Point Mechanical Check</li>
               <li>Fluid & Belt Inspection</li>
               <li>Exterior & Interior Audit</li>
               <li>Digital PDF Report Summary</li>
             </ul>
-            <button className="h-btn-outline" style={{width: '100%'}} onClick={() => navigate('/login?role=customer')}>
+            <button className="h-btn-outline" style={{ width: '100%' }} onClick={() => navigate('/login?role=customer')}>
               BOOK STANDARD →
             </button>
           </div>
@@ -243,7 +243,7 @@ const Home = () => {
             <div className="h-pricing-tier">PREMIUM</div>
             <h3 className="h-pricing-title">PREMIUM VEHICLE INSPECTION</h3>
             <p className="h-pricing-desc">Deep diagnostic audit covering everything from OBD-II to undercarriage.</p>
-            <div className="h-pricing-price">$199.99 <span>/ vehicle</span></div>
+            <div className="h-pricing-price">₹1999 <span>/ vehicle</span></div>
             <ul className="h-pricing-features">
               <li>120-Point Bumper-to-Bumper Check</li>
               <li>Full OBD-II Computer Diagnostics</li>
@@ -251,13 +251,27 @@ const Home = () => {
               <li>Detailed Photo Evidence (30+ pics)</li>
               <li>Priority 12-hour turnaround</li>
             </ul>
-            <button className="h-btn-solid" style={{width: '100%'}} onClick={() => navigate('/login?role=customer')}>
+            <button className="h-btn-solid" style={{ width: '100%' }} onClick={() => navigate('/login?role=customer')}>
               BOOK PREMIUM →
             </button>
           </div>
         </div>
       </section>
-      {}
+      {/* Contact Section */}
+      <section className="h-section" id="contact">
+        <div className="h-section-header">
+          <span className="h-section-badge">REACH OUT</span>
+          <h2 className="h-section-title">CONTACT DETAILS</h2>
+        </div>
+        <div style={{ textAlign: 'center', color: 'var(--h-text)', lineHeight: '1.8' }}>
+          <p><strong>Name:</strong> Rajneesh Yadav</p>
+          <p><strong>Mob:</strong> 9026975515</p>
+          <p><strong>Email:</strong> <a href="mailto:rajneeshyadav0507@gmail.com" style={{ color: 'var(--h-primary)', textDecoration: 'none' }}>rajneeshyadav0507@gmail.com</a></p>
+          <p><strong>Address:</strong> MMMUT Gorakhpur Uttar Pradesh 273010</p>
+        </div>
+      </section>
+
+      {/* Call to Action */}
       <section className="h-cta-section">
         <div className="h-cta-box">
           <span className="h-cta-badge">GET STARTED</span>
@@ -268,30 +282,31 @@ const Home = () => {
           </button>
         </div>
       </section>
-      {}
+
+      {/* Footer */}
       <footer className="h-footer">
         <div className="h-footer-top">
           <div className="h-footer-brand" style={{ cursor: 'pointer' }} onClick={() => window.scrollTo(0, 0)}>
-            <div className="h-nav-icon"><img src="/logo.png" alt="logo" style={{width: '100%', height: '100%', objectFit: 'contain', borderRadius: '50%'}} /></div>
-            <span className="h-nav-text">Inspectra</span>
+            <div className="h-nav-icon"><img src="/logo.png" alt="logo" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '50%' }} /></div>
+            <span className="h-nav-text" style={{ cursor: 'pointer' }}>Inspectra</span>
           </div>
           <div className="h-footer-links">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#contact">Contact</a>
-            <button onClick={() => setShowLoginModal(true)} style={{background:'none',border:'none',color:'var(--h-text-muted)',cursor:'pointer',fontSize:'13px',fontWeight:500,padding:0,fontFamily:'inherit'}}>Portal Login</button>
+            <button onClick={() => setShowLoginModal(true)} style={{ background: 'none', border: 'none', color: 'var(--h-text-muted)', cursor: 'pointer', fontSize: '13px', fontWeight: 500, padding: 0, fontFamily: 'inherit' }}>Portal Login</button>
           </div>
         </div>
         <div className="h-footer-bottom">
-          <p>© 2026 Inspectra. All rights reserved.</p>
+          <p>© 2026 <span style={{ cursor: 'pointer' }}>Inspectra</span>. All rights reserved. | Made By Rajneesh Yadav</p>
           <div className="h-footer-legal">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
           </div>
         </div>
       </footer>
-      {}
+      { }
       {showLoginModal && (
         <div className="h-modal-overlay" onClick={() => setShowLoginModal(false)}>
           <div className="h-modal-box" onClick={e => e.stopPropagation()}>

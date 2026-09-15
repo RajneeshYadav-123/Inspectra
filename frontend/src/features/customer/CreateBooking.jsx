@@ -214,9 +214,7 @@ const CreateBooking = () => {
           <p className="footnote" style={{ marginTop: 12 }}>
             Confirmation &amp; Invoice will be sent via SMS
           </p>
-          <p className="footnote" style={{ marginTop: 4 }}>
-            Verified Inspection Protocol · Secure Session
-          </p>
+
         </form>
       </div>
     </div>
